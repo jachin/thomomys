@@ -1,13 +1,14 @@
 {
-  "name": "repr",
+  "name": "thomomys",
   "version": "0.0.1",
   "authors": [
-    "Greizgh <greizgh@ephax.org>"
+    "Greizgh <greizgh@ephax.org>",
+    "Jachin Rupe <jachin@jachin.rupe.name"
   ],
   "description": "Pelican theme",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "materialize": "~0.96.0"
+    "materialize": ">=0.96.1"
   }
 }
