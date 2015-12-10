@@ -1,11 +1,13 @@
-# pelican-material
+# thomomys
 
-Material is a [pelican](http://blog.getpelican.com/) theme based on [Materialize](http://materializecss.com/), a material design framework.
+Thomomys is a [pelican](http://blog.getpelican.com/) theme based on
+[pelican-material](https://github.com/greizgh/pelican-material) which is based
+on [Materialize](http://materializecss.com/), a material design framework.
 
 ## Dependencies
 
 Dependencies are managed through [bower](http://bower.io/).
-Once you have bower, you are only one command away to use the theme.
+Once you have bower, you are only one command away from using the theme.
 
 Run this command from the `static` directory:
 
@@ -13,7 +15,7 @@ Run this command from the `static` directory:
 
 ## Configuration
 
-This template uses a cutom filter to sort tags by article count. You need to add this to your config:
+This template uses a custom filter to sort tags by article count. You need to add this to your config:
 
 ```python
 from functools import partial
@@ -24,7 +26,11 @@ JINJA_FILTERS = {
         reverse=True)} # reversed for descending order
 ```
 
-You will probably want to use [pelican-materialbox](https://github.com/greizgh/pelican-materialbox), a pelican plugin to use [materialboxed](http://materializecss.com/media.html#materialbox) from Materialize.
+You will probably want to use
+[pelican-materialbox](https://github.com/greizgh/pelican-materialbox),
+a pelican plugin to use
+[materialboxed](http://materializecss.com/media.html#materialbox) from
+Materialize.
 
 ## License
 
