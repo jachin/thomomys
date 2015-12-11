@@ -29,17 +29,17 @@
         {% if TAG_FEED_RSS and tag %}
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/materialize/dist/css/materialize.min.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/materialize.min.css">
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
         {% endblock head %}
     </head>
 
-    <body>
+    <body class="{{THEME_COLOR_BACKGROUND}}">
         <header>
-            <nav class="blue-grey darken-3" role="navigation">
+            <nav class="{{THEME_COLOR_1}}" role="navigation">
                 <div class="nav-wrapper container">
-                    <a href="{{SITEURL}}/" class="brand-logo">{{SITENAME}}</a>
+                    <a href="{{SITEURL}}/" class="{{THEME_COLOR_TEXT_INVERTED}} brand-logo">{{SITENAME}}</a>
                     <a href="#" data-activates="mobile-nav" class="button-collapse">
                         <i class="mdi-navigation-menu"></i>
                     </a>
@@ -100,29 +100,29 @@
         </div>
         </main>
 
-        <footer class="page-footer grey darken-4">
+        <footer class="page-footer {{THEME_COLOR_1}}">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="grey-text">
+                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">
                             About
                         </h5>
-                        <p class="grey-text">
+                        <p class="{{THEME_COLOR_TEXT_INVERTED}}">
                             {{ABOUT}}
                         </p>
                     </div>
                     <div class="col l3 s12">
-                        <h5 class="grey-text">Feeds</h5>
+                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">Feeds</h5>
                         <ul>
                             <li>
-                                <a class="grey-text"
+                                <a class="{{THEME_COLOR_TEXT_INVERTED}}"
                                     href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}"
                                     title="Atom feed of {{ SITENAME }}">
                                     Atom
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text"
+                                <a class="{{THEME_COLOR_TEXT_INVERTED}}"
                                     href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}"
                                     title="RSS feed of {{ SITENAME }}">
                                     RSS
@@ -132,11 +132,11 @@
                     </div>
                     <div class="col l3 s12">
                         {% if SOCIAL %}
-                        <h5 class="grey-text">Social</h5>
+                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">Social</h5>
                         <ul>
                             {% for name, link in SOCIAL %}
                             <li>
-                                <a class="grey-text" href="{{ link }}">{{ name }}</a>
+                                <a class="{{THEME_COLOR_TEXT_INVERTED}}" href="{{ link }}">{{ name }}</a>
                             </li>
                             {% endfor %}
                         {% endif %}
@@ -145,15 +145,15 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="container center grey-text text-darken-2">
+                <div class="container center {{THEME_COLOR_TEXT_INVERTED}}">
                     {{ COPYWRITE }}
                 </div>
             </div>
         </footer>
 
         {% block body_end %}
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/materialize/dist/js/materialize.min.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/materialize.min.js"></script>
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/init.js"></script>
         {% endblock body_end %}
     </body>
