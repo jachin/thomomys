@@ -19,7 +19,6 @@
 {% block content %}
 <article itemscope itemtype="http://schema.org/Article">
     <h1 itemprop="name"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                                                  class="orange-text"
                                                   title="Permalink vers {{ article.title|striptags }}">
             {{ article.title }}
         </a>
@@ -30,10 +29,10 @@
     <div class="divider"></div>
     <div class="row article-details">
         <div class="col m4 s12">
-            <i class="mdi-action-event" title="Date de publication"> <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">{{article.locale_date}}</time></i>
+            <i class="mdi-action-event" title="Publication Date"> <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">{{article.locale_date}}</time></i>
             {% if article.modified %}
             <br/>
-            <i class="mdi-editor-mode-edit" title="Date d'édition"> <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">{{article.locale_modified}}</time></i>
+            <i class="mdi-editor-mode-edit" title="Date Modified"> <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">{{article.locale_modified}}</time></i>
             {% endif %}
         </div>
         <div class="col m4 s12">

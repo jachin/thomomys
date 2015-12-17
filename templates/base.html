@@ -1,160 +1,123 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-    <head>
-        {% block head %}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>{% block title %}{{ SITENAME }} - {{SITESUBTITLE}}{% endblock title %}</title>
-        <meta charset="utf-8" />
-        {% if FEED_ALL_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
-        {% endif %}
-        {% if FEED_ALL_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
-        {% endif %}
-        {% if FEED_ATOM %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
-        {% endif %}
-        {% if FEED_RSS %}
-        <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
-        {% if CATEGORY_FEED_ATOM and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
-        {% endif %}
-        {% if CATEGORY_FEED_RSS and category %}
-        <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
-        {% endif %}
-        {% if TAG_FEED_ATOM and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
-        {% endif %}
-        {% if TAG_FEED_RSS and tag %}
-        <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
-        {% endif %}
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/materialize.min.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
-        {% endblock head %}
-    </head>
 
-    <body class="{{THEME_COLOR_BACKGROUND}}">
-        <header>
-            <nav class="{{THEME_COLOR_1}}" role="navigation">
-                <div class="nav-wrapper container">
-                    <a href="{{SITEURL}}/" class="{{THEME_COLOR_TEXT_INVERTED}} brand-logo">{{SITENAME}}</a>
-                    <a href="#" data-activates="mobile-nav" class="button-collapse">
-                        <i class="mdi-navigation-menu"></i>
+<head>
+    {% block head %}
+    <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>
+        {% block title %}{{ SITENAME }} - {{SITESUBTITLE}}{% endblock title %}
+    </title>
+    <meta charset="utf-8" />
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}"
+            type="application/atom+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}"
+            type="application/rss+xml"
+            rel="alternate"
+            title="{{ SITENAME }} Tags RSS Feed" />
+    {% endif %}
+
+    <link rel="stylesheet"
+            href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material.min.css" />
+    {% endblock head %}
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material-icons.css" />
+
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/thomomys.css" />
+
+</head>
+
+<body class="mdl-thomomys mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <a class="mdl-layout-title mdl-navigation__link" href="{{ SITEURL }}/">
+                    {{SITENAME}}
+                </a>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in pages %}
+                    <a class="mdl-navigation__link" href="{{ SITEURL }}/{{ p.url }}">
+                        {{ p.menulabel|default(p.title) }}
                     </a>
-                    <ul id="dropdown" class="dropdown-content">
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                        {% if cat == category %}
-                        <li class="active">
-                            <a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">
-                                {{ cat }}
-                            </a>
-                        </li>
-                        {% else %}
-                        <li>
-                            <a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">
-                                {{ cat }}
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                        {% endif %}
-                    </ul>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a class="dropdown-button" href="#!" data-activates="dropdown">
-                                Categories
-                                <i class="mdi-navigation-arrow-drop-down right"></i>
-                            </a>
-                        </li>
-                        <li><a href="{{SITEURL}}/archives.html">Archives</a></li>
-                    </ul>
-                    <ul id="mobile-nav" class="side-nav">
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                            {% if cat == category %}
-                            <li class="active">
-                                <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
-                            </li>
-                            {% else %}
-                            <li>
-                                <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
-                            </li>
-                            {% endif %}
-                        {% endfor %}
-                        {% endif %}
-                        <li>
-                            <a href="{{SITEURL}}/archives.html">Archives</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    {% endfor %}
+                    {% endif %}
+
+                    <a class="mdl-navigation__link" href="{{SITEURL}}/archives.html">
+                        Archives
+                    </a>
+                </nav>
+            </div>
         </header>
-
-        <main>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">{{SITENAME}}</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="{{ SITEURL }}/"><i class="material-icons" role="presentation">home</i>Home</a>
+                {% for cat, null in categories %}
+                <a class="mdl-navigation__link" href="{{ SITEURL }}/{{ cat.url }}">
+                    <i class="material-icons">folder</i>{{ cat }}
+                </a>
+                {% endfor %}
+            </nav>
         </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="overview">
+                {% block content %}
+                {% endblock %}
+            </div>
         </main>
+    </div>
+    {% block body_end %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/material.min.js"></script>
+    {% endblock body_end %}
+</body>
 
-        <footer class="page-footer {{THEME_COLOR_1}}">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">
-                            About
-                        </h5>
-                        <p class="{{THEME_COLOR_TEXT_INVERTED}}">
-                            {{ABOUT}}
-                        </p>
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">Feeds</h5>
-                        <ul>
-                            <li>
-                                <a class="{{THEME_COLOR_TEXT_INVERTED}}"
-                                    href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}"
-                                    title="Atom feed of {{ SITENAME }}">
-                                    Atom
-                                </a>
-                            </li>
-                            <li>
-                                <a class="{{THEME_COLOR_TEXT_INVERTED}}"
-                                    href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}"
-                                    title="RSS feed of {{ SITENAME }}">
-                                    RSS
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s12">
-                        {% if SOCIAL %}
-                        <h5 class="{{THEME_COLOR_TEXT_INVERTED}}">Social</h5>
-                        <ul>
-                            {% for name, link in SOCIAL %}
-                            <li>
-                                <a class="{{THEME_COLOR_TEXT_INVERTED}}" href="{{ link }}">{{ name }}</a>
-                            </li>
-                            {% endfor %}
-                        {% endif %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container center {{THEME_COLOR_TEXT_INVERTED}}">
-                    {{ COPYWRITE }}
-                </div>
-            </div>
-        </footer>
-
-        {% block body_end %}
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/materialize.min.js"></script>
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/init.js"></script>
-        {% endblock body_end %}
-    </body>
 </html>

@@ -3,7 +3,7 @@
 {% block title %}{{SITENAME}} - Articles tagged as {{tag}}{% endblock %}
 
 {% block content %}
-<h2 class="orange-text">Articles tagged as "{{ tag }}"</h2>
+<h2>Articles tagged as "{{ tag }}"</h2>
 <div class="row">
         {% for article in articles %}
         {% include "article_detail.html" %}

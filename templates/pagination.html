@@ -1,21 +1,29 @@
 {% if DEFAULT_PAGINATION and articles_paginator.num_pages>1 %}
-<div class="container">
-    <div class="row">
-        <div class="center-align">
-        <ul class="pagination">
-            {% if articles_page.has_previous() %}
-            <li class="waves-effect"><a href="{{SITEURL}}/{{articles_previous_page.url}}"><i class="mdi-navigation-chevron-left"></i></a></li>
-            {% else %}
-            <li class="disabled"><a href="#"><i class="mdi-navigation-chevron-left"></i></a></li>
-            {% endif %}
-            <li class="diabled">{{articles_page.number}}/{{articles_paginator.num_pages}}</li>
-            {% if articles_page.has_next() %}
-            <li class="waves-effect"><a href="{{SITEURL}}/{{articles_next_page.url}}"><i class="mdi-navigation-chevron-right"></i></a></li>
-            {% else %}
-            <li class="disabled"><a href="#"><i class="mdi-navigation-chevron-right"></i></a></li>
-            {% endif %}
-        </ul>
-        </div>
+<section class="section--center mdl-grid mdl-grid--no-spacing pagination">
+
+    <div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+        {% if articles_page.has_previous() %}
+        <a href="{{SITEURL}}/{{articles_previous_page.url}}"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"><i class="material-icons">arrow_back</i></button></a>
+
+        {% else %}
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" disabled><i class="material-icons">arrow_back</i></button>
+
+        {% endif %}
+
+        <span class="mdl-typography--body-1-color-contrast">
+            &nbsp;{{articles_page.number}}&nbsp;/&nbsp;{{articles_paginator.num_pages}}&nbsp;
+        </span>
+
+        {% if articles_page.has_next() %}
+
+        <a href="{{SITEURL}}/{{articles_next_page.url}}"><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"><i class="material-icons">arrow_forward</i></button></a>
+
+        {% else %}
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" disabled><i class="material-icons">arrow_forward</i></button>
+
+        {% endif %}
     </div>
-</div>
+</section>
 {% endif %}
