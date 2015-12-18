@@ -3,7 +3,7 @@
 
 {% for article in articles_page.object_list %}
 
-article_short.html
+  {% include "article_short.html" %}
 
 {% endfor %}
 {% include "pagination.html" %}

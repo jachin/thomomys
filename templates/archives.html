@@ -3,14 +3,27 @@
 {% block title %}{{ SITENAME }} - Archives{% endblock %}
 
 {% block content %}
-<h2>Archives</h2>
-<div class="row">
-    <div class="collection">
-        {% for article in dates %}
-        <a class="collection-item truncate" href="{{SITEURL}}/{{ article.url }}">
-          {{article.title}} <sub>{{article.locale_date}}</sub>
-        </a>
-        {% endfor %}
-    </div>
-</div>
+
+<section class="mdl-grid mdl-shadow--2dp section--center  mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h2>Archives</h2>
+  </div>
+  <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col">
+    <tbody>
+      {% for article in dates %}
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">
+          <a class="collection-item truncate" href="{{SITEURL}}/{{ article.url }}">
+            {{article.title|truncate(50)}}
+          </a>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          {{article.locale_date}}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
 {% endblock %}
