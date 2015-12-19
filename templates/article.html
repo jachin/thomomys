@@ -18,7 +18,6 @@
 
 {% block content %}
 
-
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
 
@@ -32,13 +31,21 @@
         </div>
 
         <div class="mdl-card__actions">
-            <i class="mdi-action-event" title="Publication Date"> <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">{{article.locale_date}}</time></i>
+            Published:
+            <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">
+                {{article.locale_date}}
+            </time>
             {% if article.modified %}
-            <br/>
-            <i class="mdi-editor-mode-edit" title="Date Modified"> <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">{{article.locale_modified}}</time></i>
+            Modified:
+            <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">
+                {{article.locale_modified}}
+            </time>
             {% endif %}
 
-            <i class="mdi-action-list" title="Catégorie"> <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></i>
+            <a class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"
+                href="{{SITEURL}}/{{article.category.url}}">
+                <i class="material-icons">folder_open</i> {{article.category}}
+            </a>
 
             {% for tag in article.tags %}
             <a class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"

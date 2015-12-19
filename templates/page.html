@@ -18,7 +18,7 @@
 
 {% block content %}
 
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp page">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">
@@ -30,18 +30,15 @@
         </div>
 
         <div class="mdl-card__actions">
-            <i class="mdi-action-event" title="Publication Date">
-                <time datetime="{{page.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">
-                    {{page.locale_date}}
-                </time>
-            </i>
+            Published:
+            <time datetime="{{page.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">
+                {{page.locale_date}}
+            </time>
             {% if page.modified %}
-            <br/>
-            <i class="mdi-editor-mode-edit" title="Date Modified">
-                <time datetime="{{page.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">
-                    {{page.locale_modified}}
-                </time>
-            </i>
+            Modified:
+            <time datetime="{{page.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">
+                {{page.locale_modified}}
+            </time>
             {% endif %}
 
         </div>
