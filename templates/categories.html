@@ -1,12 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} - Catégories{% endblock %}
+{% block title %}{{ SITENAME }} - Categories{% endblock %}
 
 {% block content %}
-<h1>Catégories du blog</h1>
-<div class="collection">
-    {%- for cat, articles in categories|sort_by_article_count %}
-    <a class="collection-item" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }} <sup>{{ articles|count }}</sup></a>
-    {% endfor %}
-<div>
+
+
+<section class="mdl-grid section--center mdl-shadow--2dp">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h2>Categories</h2>
+
+    <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col">
+      <tbody>
+        {% for cat, articles in categories|sort_by_article_count %}
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">
+            <a class="collection-item" href="{{ SITEURL }}/{{ cat.url }}">
+              {{ cat }}
+            </a>
+          </td>
+          <td>
+            {{ articles|count }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
 {% endblock %}

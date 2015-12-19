@@ -3,10 +3,29 @@
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
 {% block content %}
-<h1 class="orange-text">Tags</h1>
-<div class="collection">
-    {%- for tag, articles in tags|sort_by_article_count %}
-    <a class="collection-item" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <sup>{{ articles|count }}</sup></a>
-    {% endfor %}
-<div>
+<section class="mdl-grid mdl-shadow--2dp section--center mdl-shadow--2dp">
+
+  <div class="mdl-cell mdl-cell--12-col">
+    <h2>Tags</h2>
+  </div>
+
+  <table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col">
+    <tbody>
+      {% for tag, articles in tags|sort_by_article_count %}
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">
+          <a class="collection-item" href="{{ SITEURL }}/{{ tag.url }}">
+            {{ tag }}
+          </a>
+        </td>
+        <td class="">
+          {{ articles|count }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</section>
+
 {% endblock %}
