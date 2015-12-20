@@ -24,6 +24,8 @@ html, body {
 
 
 
+
+
 .mdl-thomomys .mdl-navigation .mdl-navigation__link {
   display: flex !important;
   flex-direction: row;
@@ -83,6 +85,7 @@ html, body {
   color: #00BCD4;
   margin: 0;
 }
+
 .mdl-thomomys .mdl-card__actions a:hover,
 .mdl-thomomys .mdl-card__actions a:active {
   color: inherit;
@@ -90,4 +93,8 @@ html, body {
 }
 .mdl-thomomys .mdl-card__supporting-text + .mdl-card__actions {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mdl-thomomys .mdl-card__actions button {
+  margin: 10px;
 }
