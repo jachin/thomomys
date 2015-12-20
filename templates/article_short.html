@@ -12,16 +12,18 @@
             {{article.summary}}
         </div>
         <div class="mdl-card__actions">
-            <a href="{{SITEURL}}/{{article.url}}" class="mdl-button">
+            <button data-href="{{SITEURL}}/{{article.url}}"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
                 <i class="material-icons">more_horiz</i>
                 More
-            </a>
+            </button>
 
             {% for tag in article.tags %}
-            <a class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"
-                href="{{SITEURL}}/{{tag.url}}">
+            <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                data-href="{{SITEURL}}/{{tag.url}}">
                 <i class="material-icons">label_outline</i> {{tag}}
-            </a>
+            </button>
             {% endfor %}
 
         </div>
