@@ -18,6 +18,11 @@
                 More
             </button>
 
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect"
+                data-href="{{SITEURL}}/{{article.category.url}}">
+                <i class="material-icons">folder_open</i> {{article.category}}
+            </button>
+
             {% for tag in article.tags %}
             <button
                 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
