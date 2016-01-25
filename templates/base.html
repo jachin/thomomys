@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <title>
-      {% block title %}{{ SITENAME }} - {{SITESUBTITLE}}{% endblock title %}
+    {% block title %}{{ SITENAME }} - {{SITESUBTITLE}}{% endblock title %}
   </title>
   <meta charset="utf-8" />
   {% if FEED_ALL_ATOM %}
@@ -45,8 +45,8 @@
 </head>
 
 <body class="mdl-thomomys mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <a class="mdl-layout-title mdl-navigation__link" href="{{ SITEURL }}/">

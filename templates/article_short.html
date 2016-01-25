@@ -1,36 +1,34 @@
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-    <div class="mdl-card mdl-cell mdl-cell--12-col">
+<div class="mdl-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">
-                <a href="{{SITEURL}}/{{article.url}}">
-                    {{article.title}}
-                </a>
-            </h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            {{article.summary}}
-        </div>
-        <div class="mdl-card__actions">
-            <button data-href="{{SITEURL}}/{{article.url}}"
-                class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
-                <i class="material-icons">more_horiz</i>
-                More
-            </button>
-
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect"
-                data-href="{{SITEURL}}/{{article.category.url}}">
-                <i class="material-icons">folder_open</i> {{article.category}}
-            </button>
-
-            {% for tag in article.tags %}
-            <button
-                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-                data-href="{{SITEURL}}/{{tag.url}}">
-                <i class="material-icons">label_outline</i> {{tag}}
-            </button>
-            {% endfor %}
-
-        </div>
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">
+            <a href="{{SITEURL}}/{{article.url}}">
+                {{article.title}}
+            </a>
+        </h2>
     </div>
-</section>
+    <div class="mdl-card__supporting-text">
+        {{article.summary}}
+    </div>
+    <div class="mdl-card__actions">
+        <button data-href="{{SITEURL}}/{{article.url}}"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+            <i class="material-icons">more_horiz</i>
+            More
+        </button>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect"
+            data-href="{{SITEURL}}/{{article.category.url}}">
+            <i class="material-icons">folder_open</i> {{article.category}}
+        </button>
+
+        {% for tag in article.tags %}
+        <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+            data-href="{{SITEURL}}/{{tag.url}}">
+            <i class="material-icons">label_outline</i> {{tag}}
+        </button>
+        {% endfor %}
+
+    </div>
+</div>

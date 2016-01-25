@@ -1,0 +1,21 @@
+{
+  "name": "thomomys",
+  "version": "1.0.0",
+  "description": "A theme for Pelican that uses the Materal Design Lite library.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jachin/thomomys.git"
+  },
+  "author": "Jachin Rupe <jachin@jachin.rupe.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jachin/thomomys/issues"
+  },
+  "homepage": "https://github.com/jachin/thomomys#readme",
+  "dependencies": {
+    "material-design-lite": "^1.0.6"
+  }
+}
