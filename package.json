@@ -1,9 +1,10 @@
 {
   "name": "thomomys",
   "version": "1.0.0",
-  "description": "A theme for Pelican that uses the Materal Design Lite library.",
+  "description": "A theme for Pelican that uses the Material Design Lite library.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "copy": "node ./sbin/copy-mdl.js",
+    "env": "env"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,8 @@
   },
   "homepage": "https://github.com/jachin/thomomys#readme",
   "dependencies": {
+    "copy-files": "^0.1.0",
+    "jquery": "^2.2.0",
     "material-design-lite": "^1.0.6"
   }
 }

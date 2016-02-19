@@ -8,6 +8,21 @@
         </h2>
     </div>
     <div class="mdl-card__supporting-text">
+
+        <p class="mdl-typography--body-1">
+            Published:
+            <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated" class="mdl-typography--body-2">
+                {{article.locale_date}}
+            </time>
+            {% if article.modified %}
+            <br />
+            Modified:
+            <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified" class="mdl-typography--body-2">
+                {{article.locale_modified}}
+            </time>
+            {% endif %}
+        </p>
+
         {{article.summary}}
     </div>
     <div class="mdl-card__actions">

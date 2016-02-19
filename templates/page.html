@@ -26,21 +26,22 @@
             </h2>
         </div>
         <div class="mdl-card__supporting-text">
+
             {{ page.content }}
-        </div>
 
-        <div class="mdl-card__actions">
-            Published:
-            <time datetime="{{page.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">
-                {{page.locale_date}}
-            </time>
-            {% if page.modified %}
-            Modified:
-            <time datetime="{{page.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">
-                {{page.locale_modified}}
-            </time>
-            {% endif %}
-
+            <p class="mdl-typography--body-1">
+                Published:
+                <time datetime="{{page.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated" class="mdl-typography--body-2">
+                    {{page.locale_date}}
+                </time>
+                {% if page.modified %}
+                <br />
+                Modified:
+                <time datetime="{{page.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified" class="mdl-typography--body-2">
+                    {{page.locale_modified}}
+                </time>
+                {% endif %}
+            </p>
         </div>
     </div>
 </section>
