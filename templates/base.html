@@ -38,6 +38,7 @@
   {% endblock head %}
 
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material.min.css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material-grid.min.css" />
 
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/material-icons.css" />
@@ -45,8 +46,8 @@
 </head>
 
 <body class="mdl-thomomys mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <a class="mdl-layout-title mdl-navigation__link" href="{{ SITEURL }}/">

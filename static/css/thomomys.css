@@ -4,25 +4,20 @@ html, body {
   padding: 0;
 }
 
-
-
 .mdl-thomomys .mdl-layout__content section:not(:last-of-type) {
   position: relative;
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
 .mdl-thomomys section.section--center {
   max-width: 860px;
 }
-
-
 
 .pagination {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-
-
 
 .mdl-thomomys .mdl-navigation .mdl-navigation__link {
   display: flex !important;
@@ -30,23 +25,23 @@ html, body {
   align-items: center;
   font-weight: 500;
 }
+
 .mdl-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
   margin-right: 32px;
 }
-
 
 .page {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-
 .mdl-thomomys .mdl-card {
   height: auto;
   display: flex;
   flex-direction: column;
 }
+
 .mdl-thomomys .mdl-card > * {
   height: auto;
 }
@@ -56,7 +51,6 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
 
 .mdl-thomomys .mdl-card div.section h1 {
   font-size: 20x;
@@ -78,8 +72,6 @@ html, body {
   font-weight: bold;
 }
 
-
-
 .mdl-thomomys .mdl-card .mdl-card__title a,
 .mdl-thomomys .mdl-card .mdl-card__title a:link,
 .mdl-thomomys .mdl-card .mdl-card__title a:visited,
@@ -97,11 +89,13 @@ html, body {
   color: inherit;
   width: calc(100% - 80px);
 }
+
 .mdl-thomomys .mdl-card__actions {
   margin: 0;
   padding: 4px 40px;
   color: inherit;
 }
+
 .mdl-thomomys .mdl-card__actions a {
   color: #00BCD4;
   margin: 0;
@@ -112,6 +106,7 @@ html, body {
   color: inherit;
   background-color: transparent;
 }
+
 .mdl-thomomys .mdl-card__supporting-text + .mdl-card__actions {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }

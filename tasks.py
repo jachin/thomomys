@@ -23,4 +23,3 @@ def build():
 
     shutil.copy2('mdl/material.min.css', 'static/css/')
     shutil.copy2('mdl/material.min.js', 'static/js/')
-
