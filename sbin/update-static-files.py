@@ -4,12 +4,16 @@ import os
 import shutil
 import sys
 
+import envoy
+
 theme_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 node_modules_path = os.path.join(theme_path, 'node_modules')
 static_path = os.path.join(theme_path, 'static')
 static_js_path = os.path.join(static_path, 'js')
 static_css_path = os.path.join(static_path, 'css')
+
+envoy.run('npm update', cwd='theme_path')
 
 if not os.path.isdir(node_modules_path):
     print("The node_modules directory isn't there you need to run npm first.")
