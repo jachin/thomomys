@@ -125,6 +125,11 @@ html, body {
   padding: 20px;
 }
 
+
+.mdl-mini-footer a {
+  text-decoration: underline;
+}
+
 /*
 These next 2 styles keep the footer at the bottom of the page.
 https://stackoverflow.com/questions/31374121/material-design-lite-and-bootstrap-sticky-footer/34307574#34307574
