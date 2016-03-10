@@ -114,3 +114,14 @@ html, body {
 .mdl-thomomys .mdl-card__actions button {
   margin: 10px;
 }
+
+.highlight {
+  white-space: pre;
+  overflow: auto;
+  word-wrap: normal;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px;
+}
+
