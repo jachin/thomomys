@@ -3,6 +3,7 @@ from invoke import task, run
 import os
 import shutil
 
+
 @task
 def clean():
     """Remove generated files"""
@@ -10,6 +11,7 @@ def clean():
     os.remove('static/css/materialize.min.css')
     os.remove('static/js/materialize.min.js')
     os.remove('static/js/jquery.min.js')
+
 
 @task
 def build():
