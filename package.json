@@ -18,7 +18,9 @@
   "homepage": "https://github.com/jachin/thomomys#readme",
   "dependencies": {
     "copy-files": "^0.1.0",
+    "highlight.js": "^9.1.0",
     "jquery": "^2.2.0",
-    "material-design-lite": "^1.0.6"
+    "material-design-lite": "^1.0.6",
+    "prismjs": "^1.4.1"
   }
 }
