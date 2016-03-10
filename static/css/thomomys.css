@@ -125,3 +125,22 @@ html, body {
   padding: 20px;
 }
 
+/*
+These next 2 styles keep the footer at the bottom of the page.
+https://stackoverflow.com/questions/31374121/material-design-lite-and-bootstrap-sticky-footer/34307574#34307574
+*/
+.mdl-layout__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+.mdl-layout__content > *:not(.mdl-layout-spacer) {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
