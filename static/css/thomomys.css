@@ -1,75 +1,76 @@
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
+html,
+body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .mdl-thomomys .mdl-layout__content section:not(:last-of-type) {
-  position: relative;
-  margin-top: 24px;
-  margin-bottom: 24px;
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .mdl-thomomys section.section--center {
-  max-width: 860px;
+    max-width: 860px;
 }
 
 .pagination {
-  margin-top: 24px;
-  margin-bottom: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .mdl-thomomys .mdl-navigation .mdl-navigation__link {
-  display: flex !important;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 500;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
 }
 
 .mdl-navigation .mdl-navigation__link .material-icons {
-  font-size: 24px;
-  margin-right: 32px;
+    font-size: 24px;
+    margin-right: 32px;
 }
 
 .page {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .mdl-thomomys .mdl-card {
-  height: auto;
-  display: flex;
-  flex-direction: column;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .mdl-thomomys .mdl-card > * {
-  height: auto;
+    height: auto;
 }
 
 .mdl-thomomys .mdl-card {
-  height: auto;
-  display: flex;
-  flex-direction: column;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .mdl-thomomys .mdl-card div.section h1 {
-  font-size: 20x;
-  font-weight: bold;
+    font-size: 20x;
+    font-weight: bold;
 }
 
 .mdl-thomomys .mdl-card div.section h2 {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .mdl-thomomys .mdl-card div.section h3 {
-  font-size: 16px;
-  font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .mdl-thomomys .mdl-card div.section h4 {
-  font-size: 14px;
-  font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .mdl-thomomys .mdl-card .mdl-card__title a,
@@ -77,75 +78,75 @@ html, body {
 .mdl-thomomys .mdl-card .mdl-card__title a:visited,
 .mdl-thomomys .mdl-card .mdl-card__title a:hover,
 .mdl-thomomys .mdl-card .mdl-card__title a:active {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .mdl-thomomys .mdl-card .mdl-card__supporting-text {
-  margin-left: 20px;
-  margin-right: 20px;
-  flex-grow: 1;
-  padding: 0;
-  color: inherit;
-  width: calc(100% - 80px);
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-grow: 1;
+    padding: 0;
+    color: inherit;
+    width: calc(100% - 80px);
 }
 
 .mdl-thomomys .mdl-card__actions {
-  margin: 0;
-  padding: 4px 40px;
-  color: inherit;
+    margin: 0;
+    padding: 4px 40px;
+    color: inherit;
 }
 
 .mdl-thomomys .mdl-card__actions a {
-  color: #00BCD4;
-  margin: 0;
+    color: #00BCD4;
+    margin: 0;
 }
 
 .mdl-thomomys .mdl-card__actions a:hover,
 .mdl-thomomys .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent;
+    color: inherit;
+    background-color: transparent;
 }
 
 .mdl-thomomys .mdl-card__supporting-text + .mdl-card__actions {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .mdl-thomomys .mdl-card__actions button {
-  margin: 10px;
+    margin: 10px;
 }
 
 .highlight {
-  white-space: pre;
-  overflow: auto;
-  word-wrap: normal;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  padding: 20px;
+    white-space: pre;
+    overflow: auto;
+    word-wrap: normal;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 20px;
 }
-
 
 .mdl-mini-footer a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 
 /*
 These next 2 styles keep the footer at the bottom of the page.
 https://stackoverflow.com/questions/31374121/material-design-lite-and-bootstrap-sticky-footer/34307574#34307574
 */
+
 .mdl-layout__content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
 }
 
 .mdl-layout__content > *:not(.mdl-layout-spacer) {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
 }
-
