@@ -130,6 +130,10 @@ body {
     text-decoration: underline;
 }
 
+.line-block {
+    background-color: rgba(158,158,158,.2);
+    padding: 1em 2em;
+}
 
 /*
 These next 2 styles keep the footer at the bottom of the page.
